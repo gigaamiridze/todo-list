@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
+tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #1A1A1A;
+}
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #5E60CE;
+  border-radius: 5px;
+}
+body #app .wrapper-block {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -24px;
+}
+
+header {
+  background-color: #0D0D0D;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo {
+  width: 120px;
+}
+
+form {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form .input-field, form .submit-btn {
+  height: 100%;
+  border-radius: 5px;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #F2F2F2;
+  text-transform: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+form .input-field {
+  width: 500px;
+  background-color: #262626;
+  text-indent: 10px;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #262626;
+}
+form .input-field::placeholder {
+  color: #808080;
+}
+form .input-field:hover, form .input-field:focus {
+  border-color: #5E60CE;
+}
+form .submit-btn {
+  width: 90px;
+  background-color: #1E6F9F;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .submit-btn:hover, form .submit-btn:focus {
+  background-color: #4EA8DE;
+}
+form .submit-btn .plus {
+  margin-left: 7px;
+}
+
+.tasks-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 15px;
+}
+.tasks-counter .created, .tasks-counter .completed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tasks-counter .created .task-name, .tasks-counter .completed .task-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4EA8DE;
+  text-transform: none;
+  margin-right: 8px;
+}
+.tasks-counter .created .circle, .tasks-counter .completed .circle {
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #D9D9D9;
+  text-transform: none;
+}
+.tasks-counter .completed .task-name {
+  color: #8284FA;
+}
+
+.empty-container {
+  border-top: 1px solid #333333;
+}
+.empty-container .content-box {
+  text-align: center;
+  padding-top: 50px;
+}
+.empty-container .content-box .clipboard {
+  width: 50px;
+}
+.empty-container .content-box .paragraph:nth-child(2) {
+  font-size: 13px;
+  font-weight: 700;
+  color: #808080;
+  text-transform: none;
+  margin: 15px 0 7px;
+}
+.empty-container .content-box .paragraph:last-child {
+  font-size: 13px;
+  font-weight: 500;
+  color: #808080;
+  text-transform: none;
+}
+
+.todo-list {
+  padding-bottom: 60px;
+}
+
+.todo-item {
+  background-color: #262626;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.todo-item:last-child {
+  margin-bottom: 0;
+}
+.todo-item .flex-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.todo-item .flex-box .checkbox-field {
+  appearance: none;
+  outline: none;
+  min-width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #4EA8DE;
+  border-radius: 50%;
+  margin: 0 15px 0 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+.todo-item .flex-box .checkbox-field::after {
+  content: "\f00c";
+  font-size: 10px;
+  font-weight: 900;
+  color: #D9D9D9;
+  text-transform: none;
+  font-family: "Font Awesome 6 Free";
+  display: none;
+}
+.todo-item .flex-box .checkbox-field:checked::after {
+  display: block;
+}
+.todo-item .flex-box .checkbox-field:checked {
+  background-color: #5E60CE;
+  border-color: #5E60CE;
+}
+.todo-item .flex-box .checkbox-field:hover {
+  border-color: #1E6F9F;
+}
+.todo-item .flex-box .checkbox-field:checked:hover {
+  background-color: #8284FA;
+  border-color: #8284FA;
+}
+.todo-item .flex-box .todo-text {
+  font-size: 13px;
+  font-weight: 400;
+  color: #F2F2F2;
+  text-transform: none;
+  line-height: 17px;
+}
+.todo-item .flex-box .completed {
+  text-decoration: line-through;
+  color: #808080;
+}
+.todo-item .trash-btn {
+  background-color: transparent;
+  border-radius: 3px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+.todo-item .trash-btn:hover {
+  background-color: #333333;
+}
+.todo-item .trash-btn i {
+  font-size: 14px;
+  font-weight: 400;
+  color: #808080;
+  text-transform: none;
+  padding: 4px 5px;
+}
+.todo-item .trash-btn i:hover {
+  color: #E25858;
+}

@@ -1,0 +1,17 @@
+.empty-container {
+  border-top: 1px solid $gray400;
+  .content-box {
+    text-align: center;
+    padding-top: 50px;
+    .clipboard {
+      width: 50px;
+    }
+    .paragraph:nth-child(2) {
+      @include text-property(13px, $bold, $gray300, none);
+      margin: 15px 0 7px;
+    }
+    .paragraph:last-child {
+      @include text-property(13px, $medium, $gray300, none);
+    }
+  }
+}

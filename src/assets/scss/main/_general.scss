@@ -1,0 +1,22 @@
+body {
+  font-family: $inter;
+  background-color: $gray600;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $purpleDark;
+    border-radius: 5px;
+  }
+  #app {
+    .wrapper-block {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: -24px;
+    }
+  }
+}

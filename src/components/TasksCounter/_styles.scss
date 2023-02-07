@@ -1,0 +1,23 @@
+.tasks-counter {
+  @include flex-property(space-between, center);
+  margin: 50px 0 15px;
+  .created, .completed {
+    @include flex-property(space-between, center);
+    .task-name {
+      @include text-property(12px, $bold, $blue, none);
+      margin-right: 8px;
+    }
+    .circle {
+      background-color: $gray400;
+      border-radius: 10px;
+      padding: 4px 8px;
+      @include flex-property(center, center);
+      @include text-property(11px, $semiBold, $gray200, none);
+    }
+  }
+  .completed {
+    .task-name {
+      color: $purple;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+header {
+  background-color: $gray700;
+  height: 170px;
+  @include flex-property(center, center);
+  .logo {
+    width: 120px;
+  }
+}

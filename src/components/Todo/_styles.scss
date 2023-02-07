@@ -1,0 +1,74 @@
+.todo-item {
+  background-color: $gray500;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 7px;
+  @include border(1px, solid, $gray400);
+  @include flex-property(space-between, flex-start);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .flex-box {
+    @include flex-property(flex-start, flex-start);
+    .checkbox-field {
+      appearance: none;
+      outline: none;
+      min-width: 16px;
+      height: 16px;
+      background-color: transparent;
+      @include border(1.5px, solid, $blue);
+      border-radius: 50%;
+      margin: 0 15px 0 0;
+      cursor: pointer;
+      @include flex-property(center, center);
+      @include transition(all, 0.3s, ease);
+      &::after {
+        content: '\f00c';
+        @include text-property(10px, 900, $gray200, none); 
+        font-family: 'Font Awesome 6 Free';
+        display: none;
+      }
+      &:checked::after {
+        display: block;
+      }
+      &:checked {
+        background-color: $purpleDark;
+        border-color: $purpleDark;
+      }
+      // Hover Effects
+      &:hover {
+        border-color: $blueDark
+      }
+      &:checked:hover {
+        background-color: $purple;
+        border-color: $purple;
+      }
+    }
+    .todo-text {
+      @include text-property(13px, $regular, $gray100, none);
+      line-height: 17px;
+    }
+    // For todo text
+    .completed {
+      text-decoration: line-through;
+      color: $gray300;
+    }
+  }
+  .trash-btn {
+    background-color: transparent;
+    border-radius: 3px;
+    margin-left: 20px;
+    cursor: pointer;
+    @include transition(all, 0.3s, ease);
+    &:hover {
+      background-color: $gray400;
+    }
+    i {
+      @include text-property(14px, $regular, $gray300, none);
+      padding: 4px 5px;
+      &:hover {
+        color: $danger;
+      }
+    }
+  }
+}

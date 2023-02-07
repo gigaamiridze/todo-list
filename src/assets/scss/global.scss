@@ -1,0 +1,15 @@
+// Importing font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// Importing scss files
+@import './base/reset';
+@import './modules/variables';
+@import './modules/mixins';
+@import './modules/classes';
+@import './main/general';
+@import '../../components/Header/styles';
+@import '../../components/Form/styles';
+@import '../../components/TasksCounter/styles';
+@import '../../components/EmptyList/styles';
+@import '../../components/TodoList/styles';
+@import '../../components/Todo/styles';
